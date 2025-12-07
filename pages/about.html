@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">关于我们 - AutoParts</title>
+    <meta name="description" content="AutoParts 公司介绍，发展历程，企业文化，生产资质">
+    
+    <!-- 外部资源 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 配置文件引入 -->
+    <script src="../config.js"></script>
+    
+    <!-- Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#FF7D00',
+                        dark: {
+                            primary: '#2563eb',
+                            secondary: '#f97316'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义样式 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto { content-visibility: auto; }
+            .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            .transition-navbar { transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s; }
+            .scale-hover { transition: transform 0.3s ease; }
+            .scale-hover:hover { transform: scale(1.03); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm transition-navbar py-4">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="../index.html" class="text-2xl font-bold text-primary dark:text-dark-primary flex items-center">
+                    <img src="" alt="Logo" class="h-8 mr-2" id="logo-img">
+                    <span id="brand-name">AutoParts</span>
+                </a>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">首页</a>
+                    <a href="about.html" class="nav-link font-medium text-primary dark:text-dark-primary">关于我们</a>
+                    <a href="products.html" class="nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">产品展示</a>
+                    <a href="services.html" class="nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">技术服务</a>
+                    <a href="quality.html" class="nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">质量保障</a>
+                    <a href="news.html" class="nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">新闻资讯</a>
+                    <a href="contact.html" class="nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">联系我们</a>
+                </nav>
+                
+                <!-- 功能按钮 -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fa fa-moon-o dark:hidden"></i>
+                        <i class="fa fa-sun-o hidden dark:inline"></i>
+                    </button>
+                    <button id="lang-toggle" class="px-3 py-1 rounded border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <span id="lang-text">EN</span>
+                    </button>
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 移动端导航 -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="../index.html" class="mobile-nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">首页</a>
+                    <a href="about.html" class="mobile-nav-link font-medium text-primary dark:text-dark-primary">关于我们</a>
+                    <a href="products.html" class="mobile-nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">产品展示</a>
+                    <a href="services.html" class="mobile-nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">技术服务</a>
+                    <a href="quality.html" class="mobile-nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">质量保障</a>
+                    <a href="news.html" class="mobile-nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">新闻资讯</a>
+                    <a href="contact.html" class="mobile-nav-link font-medium hover:text-primary dark:hover:text-dark-primary transition-colors">联系我们</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="pt-28 pb-10 bg-gradient-to-br from-primary/5 to-secondary/5 dark:from-primary/10 dark:to-secondary/10">
+        <div class="container mx-auto px-4 md:px-6">
+            <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold text-center text-shadow" id="about-title">
+                领先的汽车零部件解决方案提供商
+            </h1>
+            <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+    </section>
+
+    <!-- 公司简介 -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <img src="" alt="公司环境" class="w-full h-auto rounded-xl shadow-lg" id="about-img">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold mb-6" id="about-desc-title">公司简介</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">
+                        公司成立于2005年，位于江苏省苏州市工业园区，是专业从事汽车冲压件、焊接件研发、生产和销售的高新技术企业。占地面积30000平方米，建筑面积20000平方米，现有员工300余人，其中技术人员占比30%。
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">
+                        我们拥有先进
